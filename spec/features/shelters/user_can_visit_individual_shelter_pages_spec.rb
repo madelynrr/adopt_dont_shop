@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe "shelters view page", type: :feature do
   it "can display each shelter and their information" do
-    shelter_1 = Shelter.create(name: "Longmont Shelter",
+    shelter_1 = Shelter.create(id: 1,
+                              name: "Longmont Shelter",
                                 address: "123 Main St.",
                                 city: "Longmont",
                                 state:"CO",
