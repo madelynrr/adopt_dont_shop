@@ -5,7 +5,7 @@ RSpec.describe "welcome page", type: :feature do
 
     visit "/"
 
-    expect(page).to have_content("Hello World")
+    expect(page).to have_content("Adopt Don't Shop")
 
   end
 end
