@@ -6,3 +6,5 @@
 <p>Zip Code: <%= @shelter.zip %></p>
 
 <%= link_to "Edit Shelter Information", "/shelters/#{@shelter.id}/edit" %>
+
+<%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
