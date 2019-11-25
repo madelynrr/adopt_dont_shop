@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20191125003819) do
     t.string "sex"
     t.string "adoption_status"
     t.bigint "shelter_id"
+    t.index ["shelter_id"], name: "index_pets_on_shelter_id"
   end
 
   create_table "shelters", force: :cascade do |t|
