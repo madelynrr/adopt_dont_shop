@@ -3,4 +3,8 @@
 <p>Age: <%= @pet.age %></p>
 <p>Sex: <%= @pet.sex %></p>
 <p>Description: <%= @pet.description %></p>
-<p>Adoption Status: <%= @pet.adoption_status %></p>
+<% if @pet.adoption_status == true %>
+  <p>Adoption Status: Adoptable!</p>
+  <% else %>
+  <p>Adoption Status: Pending Adoption</p>
+<% end %>
