@@ -10,3 +10,5 @@
 <% end %>
 
 <%= link_to "Edit Pet Profile", "/pets/#{@pet.id}/edit" %>
+
+<%= link_to "Delete Pet Profile", "/pets/#{@pet.id}", method: :delete %>
