@@ -10,16 +10,18 @@ RSpec.describe "a user can visit pet index page" do
 
     visit '/pets'
 
-    # expect(page).to have_xpath("https://www.thehappycatsite.com/wp-content/uploads/2017/05/grey4.jpg")
+    expect(page).to have_css("img[src*='https://www.thehappycatsite.com/wp-content/uploads/2017/05/grey4.jpg']")
     expect(page).to have_content("Name: Faye")
     expect(page).to have_content("Age: 3")
     expect(page).to have_content("Sex: Female")
     expect(page).to have_content("Shelter: Boulder Shelter")
 
-    # expect(page).to have_xpath("https://image.shutterstock.com/image-photo/cute-muzzle-black-cat-closeup-260nw-525137104.jpg")
+    expect(page).to have_css("img[src*='https://image.shutterstock.com/image-photo/cute-muzzle-black-cat-closeup-260nw-525137104.jpg']")
     expect(page).to have_content("Name: Ed")
     expect(page).to have_content("Age: 2")
     expect(page).to have_content("Sex: Male")
     expect(page).to have_content("Shelter: Denver Shelter")
+    
+    expect(page).to_not have_css("img[src*='https://www.catster.com/wp-content/uploads/2018/01/Orange-tabby-cat-sleeping-with-eyes-closed.jpg']")
   end
 end
