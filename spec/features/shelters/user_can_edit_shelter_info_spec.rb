@@ -9,6 +9,7 @@ RSpec.describe "as a user" do
     click_link "Edit Shelter Information"
 
     expect(current_path).to eq("/shelters/#{littleton_shelter.id}/edit")
+    expect(page).to have_content("Edit #{littleton_shelter.name} Information")
 
     fill_in "Name", with: "Littleton Shelter"
     fill_in "Address", with: "7619 S. Lamar Way"
