@@ -7,8 +7,7 @@ RSpec.describe "as a user" do
 
     pet = shelter.pets.create(image: "https://c8.alamy.com/comp/S0B5EF/goofy-cat-S0B5EF.jpg", name: "Fay", description: "", age: 5, sex: "Male", adoption_status: true)
 
-    visit "shelters/#{shelter.id}"
-
+    visit "/shelters/#{shelter.id}"
     click_link "Delete Shelter"
 
     expect(current_path).to eq('/shelters')

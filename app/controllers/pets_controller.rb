@@ -40,6 +40,4 @@ class PetsController < ApplicationController
     params.permit(:image, :name, :description, :age, :sex)
   end
 
-
-
 end
