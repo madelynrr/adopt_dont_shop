@@ -1,4 +1,6 @@
 <%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
+
+<section class="edit-form">
   <h3>Edit <%= link_to @shelter.name, "/shelters/#{@shelter.id}" %> Information</h3>
 
   <%= label_tag :name %>
@@ -15,7 +17,9 @@
 
   <%= label_tag :zip %>
   <%= text_field_tag :zip %>
+  <br></br>
 
   <%= submit_tag "Update Shelter" %>
 
 <% end %>
+</section>

@@ -1,11 +1,17 @@
 <h3><%= link_to @shelter.name, "/shelters/#{@shelter.id}" %> Pets</h3>
 <% @pets.each do |pet| %>
+<section class="index">
   <%= image_tag pet.image %>
   <h2>Name: <%= link_to pet.name, "/pets/#{pet.id}" %></h2>
   <p>Age: <%= pet.age  %></p>
   <p>Sex: <%= pet.sex %></p>
-  <%= link_to "Edit #{pet.name}'s Profile", "/pets/#{pet.id}/edit" %></br>
+
+  <%= link_to "Edit #{pet.name}'s Profile", "/pets/#{pet.id}/edit" %>
+
   <%= link_to "Delete #{pet.name}'s Profile", "/pets/#{pet.id}", method: :delete %>
+</section>
 <% end %>
 
+<p class="add">
 <%= link_to "Add a Pet", "/shelters/#{@shelter.id}/pets/new" %>
+</p>
