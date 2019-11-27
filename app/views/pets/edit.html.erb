@@ -1,5 +1,5 @@
 <%= form_tag "/pets/#{@pet.id}", method: :patch do %>
-<h3>Edit <%= @pet.name %>'s Profile</h3>
+<h3>Edit <%= link_to @pet.name, "/pets/#{@pet.id}" %>'s Profile</h3>
 
 
   <%= label_tag :image %>

@@ -1,5 +1,5 @@
 <%= image_tag @pet.image %>
-<h3>Name: <%= @pet.name %></h3>
+<h3>Name: <%= link_to @pet.name, "/pets/#{@pet.id}" %></h3>
 <p>Age: <%= @pet.age %></p>
 <p>Sex: <%= @pet.sex %></p>
 <p>Description: <%= @pet.description %></p>
