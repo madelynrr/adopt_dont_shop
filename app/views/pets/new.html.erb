@@ -1,6 +1,10 @@
 <h3>Put a Pet up for Adoption</h3>
 
+
 <%= form_tag "/shelters/#{@shelter.id}/pets" do %>
+
+<section class="edit-form">
+
   <%= label_tag :image %>
   <%= text_field_tag :image %>
 
@@ -18,7 +22,9 @@
 
   <% label_tag :adoption_status %>
   <% text_field_tag :adoption_status %>
+  <br></br>
 
   <%= submit_tag "Create Pet Profile" %>
 
 <% end %>
+</section>

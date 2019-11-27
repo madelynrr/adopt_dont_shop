@@ -9,8 +9,14 @@
   </head>
 
   <body>
-    <%= link_to "All Pets Available for Adoption", '/pets' %>
-    <%= link_to "All Shelters", '/shelters' %>
+    <h1>Adopt Don't Shop</h1>
+
+    <nav class="nav_bar">
+      <%= link_to "All Pets Available for Adoption", '/pets' %>
+
+      <%= link_to "All Shelters", '/shelters' %>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

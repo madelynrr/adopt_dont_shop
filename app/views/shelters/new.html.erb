@@ -1,5 +1,9 @@
+<h3>Add a New Shelter</h3>
+
 <%= form_tag '/shelters' do %>
-  <%= label_tag :name %>
+
+<section class="edit-form">
+    <%= label_tag :name %>
   <%= text_field_tag :name %>
 
   <%= label_tag :address %>
@@ -13,7 +17,9 @@
 
   <%= label_tag :zip %>
   <%= text_field_tag :zip %>
+  <br></br>
 
   <%= submit_tag "Create Shelter" %>
 
 <% end %>
+</section>
