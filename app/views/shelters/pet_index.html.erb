@@ -4,6 +4,7 @@
   <h2>Name: <%= pet.name %></h2>
   <p>Age: <%= pet.age  %></p>
   <p>Sex: <%= pet.sex %></p>
+  <%= link_to "Edit #{pet.name}'s Profile", "/pets/#{pet.id}/edit" %></br>
 <% end %>
 
 <%= link_to "Add a Pet", "/shelters/#{@shelter.id}/pets/new" %>
