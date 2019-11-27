@@ -5,19 +5,19 @@
 
 
   <%= label_tag :image %>
-  <%= text_field_tag :image %>
+  <%= text_field_tag :image, nil, placeholder: @pet.image %>
 
   <%= label_tag :name %>
-  <%= text_field_tag :name %>
+  <%= text_field_tag :name, nil, placeholder: @pet.name %>
 
   <%= label_tag :description %>
-  <%= text_field_tag :description %>
+  <%= text_field_tag :description, nil, placeholder: @pet.description %>
 
   <%= label_tag :age %>
-  <%= text_field_tag :age %>
+  <%= text_field_tag :age, nil, placeholder: @pet.age %>
 
   <%= label_tag :sex %>
-  <%= text_field_tag :sex %>
+  <%= text_field_tag :sex, nil, placeholder: @pet.sex %>
   <br></br>
 
   <%= submit_tag "Update Pet Profile" %>
