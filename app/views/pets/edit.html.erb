@@ -1,6 +1,6 @@
-<h3>Edit Pet Information</h3>
-
 <%= form_tag "/pets/#{@pet.id}", method: :patch do %>
+<h3>Edit <%= @pet.name %>'s Profile</h3>
+
 
   <%= label_tag :image %>
   <%= text_field_tag :image %>

@@ -6,4 +6,7 @@
   <p>Age: <%= pet.age  %></p>
   <p>Sex: <%= pet.sex %></p>
   <p>Shelter: <%= Shelter.find(pet.shelter_id).name %></p>
+  <%= link_to "Edit #{pet.name}'s Profile", "/pets/#{pet.id}/edit" %></br>
+
+
 <% end %>
