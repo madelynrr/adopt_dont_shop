@@ -10,7 +10,7 @@ RSpec.describe "user can edit pet's information" do
     click_link "Edit Pet Profile"
 
     expect(current_path).to eq("/pets/#{pet_1.id}/edit")
-    expect(page).to have_content("Edit Pet Information")
+    expect(page).to have_content("Edit #{pet_1.name}'s Profile")
 
     fill_in "Image", with: "https://www.thehappycatsite.com/wp-content/uploads/2017/05/grey4.jpg"
     fill_in "Name", with: "Faye"
